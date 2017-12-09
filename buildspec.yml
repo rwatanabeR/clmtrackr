@@ -1,0 +1,10 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo "post_build doing"
+  post_build:
+    commands:
+      - aws s3 sync ./ s3://genki.hack.day
+
